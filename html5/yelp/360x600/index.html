@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="ad.size" content="width=300, height=600">
 <title>Yelp HTML5 Ad Test</title>
+ <script>
+	 window.addEventListener('load', () => {
+		 document.body.addEventListener('click', () => {
+             window.parent.postMessage('ad-clicked', '*');
+         });
+     });
+</script>
 </head>
 <body style="background-color:#FFFFFF;margin:0px;">
 	<img src='./yelp-300x600.jpg'/>
